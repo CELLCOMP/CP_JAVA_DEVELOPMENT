@@ -9,6 +9,7 @@ import javax.swing.BoxLayout;
 import java.awt.Color;
 import javax.swing.JTabbedPane;
 import javax.swing.UIManager;
+import java.awt.Font;
 
 public class Pantalla_Principal extends JFrame {
 
@@ -50,10 +51,18 @@ public class Pantalla_Principal extends JFrame {
 		contentPane.setLayout(new BorderLayout(0, 0));
 		
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.setFont(new Font("SansSerif", Font.PLAIN, 14));
+		
+			Panel_Configuracion panel_Configuracion = new Panel_Configuracion();
+			
+			tabbedPane.add("Configuracion", panel_Configuracion);
+
 		
 		Panel_Editar panel_editar = new Panel_Editar();
-		tabbedPane.add("File", panel_editar);
-	
+		tabbedPane.add("Editar",panel_editar);
+		
+		
+		
 		contentPane.add(tabbedPane, BorderLayout.NORTH);
 	
 
